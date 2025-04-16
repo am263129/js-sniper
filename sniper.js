@@ -37,7 +37,7 @@ async function scanWallets() {
   }
 
   if (found) {
-    fs.writeFileSync("found_wallet.txt", logOutput);
+    fs.writeFileSync(`found_wallet${Date.now()}.txt`, logOutput);
     console.log("\n✅ Found a wallet with SOL. Saved to found_wallet.txt");
   } else {
     console.log("\n❌ No wallets with SOL found.");
